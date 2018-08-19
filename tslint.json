@@ -1,0 +1,11 @@
+{
+  "extends": ["tslint-config-yoshi", "tslint-plugin-prettier"],
+  "rules": {
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "prettier": [true, { "singleQuote": true }],
+    "no-invalid-this": false,
+    "object-curly-spacing": [true, "always"],
+    "quotemark": [true, "single", "jsx-double"],
+    "triple-equals": [true, "allow-null-check"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "app.title": "Dashboard Search",
+  "app.intro": "",
+
+  "sitemap.settings.title": "Settings",
+  "sitemap.settings.description": "Main settings page",
+
+  "sitemap.settings.addLogo.title": "Add Logo",
+  "sitemap.settings.addLogo.description": "Add a stunning logo to your website",
+  "sitemap.settings.addLogo.tags.settings": "settings",
+  "sitemap.settings.addLogo.tags.logo": "logo",
+
+  "sitemap.store.product.list": "Product List",
+  "sitemap.store.product.list.description": "View list of your store products",
+  "sitemap.store.product.list.tags.store": "store",
+  "sitemap.store.product.list.tags.product": "product",
+
+  "sitemap.restaurants.addMenuItem.title": "Add Menu Item",
+  "sitemap.restaurants.addMenuItem.description": "Add a new menu item to your menu",
+  "sitemap.restaurants.addMenuItem.tags.add": "add",
+  "sitemap.restaurants.addMenuItem.tags.menu": "menu",
+  "sitemap.restaurants.addMenuItem.tags.item": "item"
+}
