@@ -1,6 +1,7 @@
 {
   "extends": ["tslint-config-yoshi", "tslint-plugin-prettier"],
   "rules": {
+    "no-string-literal": false,
     "semicolon": [true, "always", "ignore-bound-class-methods"],
     "prettier": [true, { "singleQuote": true }],
     "no-invalid-this": false,

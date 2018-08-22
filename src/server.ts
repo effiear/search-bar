@@ -18,9 +18,17 @@ module.exports = (app: Router, context) => {
     const renderModel = getRenderModel(req);
     const html = ejs.render(templateFile, renderModel, {
       cache: isProduction,
-      filename: templatePath,
+      filename: templatePath
     });
     res.send(html);
+  });
+
+  app.get('/dodasearch', (req, res) => {
+    console.log('Sending data with Producer!');
+    context.produceSearchData({ a: 'aa', b: 'bb' }, req['aspects']).then(() => {
+      console.log('Data sent!!');
+      res.sendStatus(201);
+    });
   });
 
   function getRenderModel(req) {
@@ -31,7 +39,7 @@ module.exports = (app: Router, context) => {
         req.aspects['web-context'].debug ||
         process.env.NODE_ENV === 'development',
       clientTopology: config.clientTopology,
-      title: 'Wix Full Stack Project Boilerplate',
+      title: 'Wix Full Stack Project Boilerplate'
     };
   }
 

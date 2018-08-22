@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { translate, InjectedTranslateProps } from 'react-i18next';
 import * as s from './App.scss';
-import * as PropTypes from 'prop-types';
 import SearchBar from '../Search/SearchBar';
 
 interface AppProps extends InjectedTranslateProps {}

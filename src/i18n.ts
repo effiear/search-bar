@@ -7,11 +7,11 @@ export default function i18n({ locale = 'en', baseUrl = '' } = {}) {
     fallbackLng: 'en',
     keySeparator: '$',
     interpolation: {
-      escapeValue: false,
+      escapeValue: false
     },
     backend: {
       loadPath: `${baseUrl}assets/locale/messages_{{lng}}.json`,
-      crossDomain: true,
-    },
+      crossDomain: true
+    }
   });
 }
