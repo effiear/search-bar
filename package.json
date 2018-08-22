@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "yoshi start",
+    "start-dev": "yoshi start --entry-point=./index-dev.js --no-test",
     "precommit": "yoshi lint",
     "pretest": "yoshi build",
     "test": "yoshi test",

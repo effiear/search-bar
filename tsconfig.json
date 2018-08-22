@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist/",
     "sourceMap": true,
+    "allowJs": true,
     "noImplicitAny": false,
     "module": "commonjs",
     "moduleResolution": "node",
@@ -18,6 +19,7 @@
   "files": [
     "./src/external-types.d.ts",
     "./src/server.ts",
-    "./src/client.tsx"
+    "./src/client.tsx",
+    "./lib/config.js"
   ]
 }
