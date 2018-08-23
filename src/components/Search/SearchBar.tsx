@@ -3,7 +3,8 @@ import * as s from './SearchBar.scss';
 import { InjectedTranslateProps, translate } from 'react-i18next';
 import InputWithOptions from 'wix-style-react/InputWithOptions';
 
-import searchConfig from './search.config.json';
+// import searchConfig from './search-config.json';
+import { searchConfig } from './search-config';
 import { SearchUtil } from './SearchUtil';
 
 interface InputWithOptionsOption {
@@ -72,7 +73,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   };
 
   render() {
-    const { t } = this.props;
+    // const { t } = this.props;
 
     // const options = [
     //   { id: 0, value: 'First option' },

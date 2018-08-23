@@ -5,7 +5,10 @@
       "description": "{{sitemap.settings.description}}",
       "type": "page",
       "icon": "http://icon.png",
-      "tags": ["settings", "info"],
+      "tags": [
+        "settings",
+        "info"
+      ],
       "deep_link": "http://link-to-page"
     },
     {
@@ -35,7 +38,11 @@
       "description": "{{sitemap.restaurants.addMenuItem.description}}",
       "type": "quick_action",
       "icon": "http://icon.png",
-      "tags": ["add", "menu", "item"],
+      "tags": [
+        "add",
+        "menu",
+        "item"
+      ],
       "deep_link": "http://link-to-page"
     }
   ]
