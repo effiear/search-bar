@@ -23,11 +23,19 @@ module.exports = (app: Router, context) => {
     res.send(html);
   });
 
-  app.get('/dodasearch', (req, res) => {
+  app.get('/produce', (req, res) => {
     console.log('Sending data with Producer!');
     context.produceSearchData({ a: 'aa', b: 'bb' }, req['aspects']).then(() => {
       console.log('Data sent!!');
       res.sendStatus(201);
+    });
+  });
+
+  app.get('/produce-data', (req, res) => {
+    console.log('Sending request query data with Producer!');
+    context.produceSearchData(req.query, req['aspects']).then(() => {
+      console.log('Data sent!!');
+      res.json(req.query);
     });
   });
 

@@ -8,7 +8,7 @@ const { greynode, beforeAndAfter, app } = require('../environment');
 describe('produce consume tests', () => {
   beforeAndAfter();
 
-  const consumer = greynode.consume(TOPICS.EFFIE_TEST_TOPIC1);
+  const consumer = greynode.consume(TOPICS.CX_OX_TEST_TOPIC);
 
   // it('consumes message via greynode', async () => {
   // const searchData = {
@@ -25,7 +25,7 @@ describe('produce consume tests', () => {
 
   it('produces message via greynode', async () => {
     await consumer.start();
-    await axios.get(app.getUrl('/dodasearch'));
+    await axios.get(app.getUrl('/produce'));
     return eventually(() =>
       expect(consumer.messages[0]).to.deep.include({ a: 'aa' })
     );

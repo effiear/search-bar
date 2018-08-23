@@ -7,7 +7,7 @@ const rootDir = process.env.SRC_PATH || './dist/src';
 const getPath = filename => path.join(rootDir, filename);
 
 const greynodeOpts = {
-  createTopics: [{ name: TOPICS.EFFIE_TEST_TOPIC1 }]
+  createTopics: [{ name: TOPICS.CX_OX_TEST_TOPIC }]
 };
 
 if (process.env.NODE_ENV !== 'production') {

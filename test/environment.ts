@@ -7,8 +7,6 @@ export const app = bootstrapServer();
 export const greynode = greynodeTestkit(TOPICS.external);
 
 export function beforeAndAfter() {
-  // greynode.beforeAndAfter();
-
   before(async () => {
     await greynode.start();
     await greynode.emitConfig();
@@ -21,9 +19,6 @@ export function beforeAndAfter() {
     await app.stop();
     await greynode.stop();
   });
-
-  // stop all before greynode (do not use before and after but "before' and "after")
-  // app.beforeAndAfter();
 }
 
 export function emitConfigs() {
