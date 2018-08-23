@@ -39,6 +39,10 @@ module.exports = (app: Router, context) => {
     });
   });
 
+  app.get('/consume', (req, res) => {
+    res.json(global['consumedData']);
+  });
+
   function getRenderModel(req) {
     return {
       locale: req.aspects['web-context'].language,
