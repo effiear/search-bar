@@ -73,24 +73,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   };
 
   render() {
-    // const { t } = this.props;
-
-    // const options = [
-    //   { id: 0, value: 'First option' },
-    //   { id: 1, value: 'Unselectable option', unselectable: true },
-    //   { id: 2, value: 'Third option' }
-    // ];
-
     const options = this.state.searchResultsInputOptions;
-
-    // const predicate = element => {
-    //   return this.state.value
-    //     ? element.value
-    //         .toLowerCase()
-    //         .indexOf(this.state.value.toLowerCase()) !== -1
-    //     : true;
-    // };
-
     const predicate = element => true;
 
     return (

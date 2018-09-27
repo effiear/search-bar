@@ -4,6 +4,7 @@ import * as ejs from 'ejs';
 import * as wixExpressCsrf from 'wix-express-csrf';
 import * as wixExpressRequireHttps from 'wix-express-require-https';
 import { readFileSync } from 'fs';
+const Authorization = require('wix-authorization');
 
 module.exports = (app: Router, context) => {
   const config = context.config.load('search-bar');
@@ -41,6 +42,22 @@ module.exports = (app: Router, context) => {
 
   app.get('/consume', (req, res) => {
     res.json(global['consumedData']);
+  });
+
+  app.get('/sign', (req, res) => {
+    console.log('Signing...');
+    // const token = context.s2sAuth.sign(
+    //   req.query.instanceId,
+    //   10 /* expiryInSeconds */
+    // );
+
+    const token = Authorization.getToken(req['aspects']);
+    console.log('token:', token);
+    console.log('req.query.instanceId:', req.query.instanceId);
+    const newToken = context.signer.sign('my-instance-id');
+    Authorization.setToken(req['aspects'], newToken);
+
+    res.json({ token: newToken });
   });
 
   function getRenderModel(req) {
